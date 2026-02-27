@@ -5,22 +5,22 @@
 class Myna < Formula
   desc "Myna CLI - The Postman for AWS services"
   homepage "https://jpalaniselvam.github.io/myna"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jpalaniselvam/myna/releases/download/v0.1.0/myna_Darwin_x86_64.tar.gz"
-      sha256 "891d22c22c0c37adc4cdd11f59dac7560039eaea433105d8cc244faa9b324f7d"
+      url "https://github.com/jpalaniselvam/myna/releases/download/v0.2.0/myna_Darwin_x86_64.tar.gz"
+      sha256 "a0d1958d4ba32cc83f6b9baed52563bbe4c944f65c83c7fe011379188952b9db"
 
-      def install
+      define_method(:install) do
         bin.install "myna"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jpalaniselvam/myna/releases/download/v0.1.0/myna_Darwin_arm64.tar.gz"
-      sha256 "13859b717d1b7c396b2dd19677e9fb2be5e0166362d15982b49a338699c167e1"
+      url "https://github.com/jpalaniselvam/myna/releases/download/v0.2.0/myna_Darwin_arm64.tar.gz"
+      sha256 "80892c4dc1c59926c951c6886bc2cac48d7af43a499874df66851ba22a498e58"
 
-      def install
+      define_method(:install) do
         bin.install "myna"
       end
     end
@@ -28,16 +28,16 @@ class Myna < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jpalaniselvam/myna/releases/download/v0.1.0/myna_Linux_x86_64.tar.gz"
-      sha256 "b34816c93d7e43904e0fbdcd5fbfc9a8926ccb0f887cdf935a393ff694d1a5bf"
-      def install
+      url "https://github.com/jpalaniselvam/myna/releases/download/v0.2.0/myna_Linux_x86_64.tar.gz"
+      sha256 "86682a1c574e6ad7e4f97b4ce4ac3c715d06b54d23a536f4e899314d7bf74dff"
+      define_method(:install) do
         bin.install "myna"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jpalaniselvam/myna/releases/download/v0.1.0/myna_Linux_arm64.tar.gz"
-      sha256 "ceaeef292917bca7b517cba711e1b9b5505e782d7506242d48b5c6316bcab83b"
-      def install
+      url "https://github.com/jpalaniselvam/myna/releases/download/v0.2.0/myna_Linux_arm64.tar.gz"
+      sha256 "c49d878c7324062b6ea3a2cb82a209fab311071a82fd0d5b8db7c85577c00a68"
+      define_method(:install) do
         bin.install "myna"
       end
     end
